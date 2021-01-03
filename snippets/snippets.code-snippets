@@ -1,0 +1,36 @@
+{
+    "Create the table tamplate ":{
+        "prefix": "!tbl",
+        "body": [
+            "<div classs=\"container\">",
+"<table class=\"table table-bordered\">",
+"<thead class=\"thead-dark\">",
+"<tr>",
+"<th scope=\"col\" *ngFor=\"let item of $1:[{ label: 'FIRST NAME', columnName: 'firstName', allowPipe: false, value: 'John'}, { label: 'DATE OF BIRTH', columnName: 'dateOfBirth', allowPipe: true, dateFormat: 'dd/MM/yyyy' }, { label: 'AGE', columnName: 'age', allowPipe: false, value: 25 }]; let i=index;\">{{item.label}}</th>",
+"</tr>",
+"</thead>",
+"<tbody>",
+"<tr>",
+"<td *ngFor=\"let item of [{ label: 'FIRST NAME', columnName: 'firstName', allowPipe: false, value: 'John'}, { label: 'DATE OF BIRTH', columnName: 'dateOfBirth', allowPipe: true, dateFormat: 'dd/MM/yyyy' }, { label: 'AGE', columnName: 'age', allowPipe: false, value: 25 }]; let i=index;\">{{item.value}}</td>",
+"</tr>",
+"</tbody>",
+"</table>",
+"</div>",
+        ],
+        "description": "Create the basic table structure by taking the cloloum name, coloumn value, date format, pipe, visibllity into consideration"
+       },
+       "Create the method": {
+           "prefix": "!fnt",
+           "body": [
+            "getData(){",
+            "  this.Service.getPastClasses().subscribe(resp => {",
+            "   if (resp) {",
+            "   console.log(resp);",
+            "   }",
+            "  });",
+            "}",
+
+           ],
+           "description": "Create the method with service call in it and some logic in it"
+       }
+}

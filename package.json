@@ -1,0 +1,30 @@
+ {
+    "name": "tablesnippets",
+    "displayName": "tableSnippets",
+    "description": "Used to create the table templete",
+    "version": "0.0.1",
+    "publisher": "Suraj Aher",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/surajaher98/vsCodeExtension/blob/master/logo.png"
+    },
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.45.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "typescrpipt",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
